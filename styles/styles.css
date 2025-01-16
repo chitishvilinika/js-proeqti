@@ -1,5 +1,6 @@
 * {
     max-width: 100vw;
+    overflow-x: hidden;
 }
 
 .contact-fixed {
@@ -8,6 +9,7 @@
     right: 30px;
     background-color: rgb(217,13,13);
     color: white;
+    display: none;
     font-size: 24px;
     border: none;
     border-radius: 15px;
@@ -15,6 +17,11 @@
     padding-right: 30px;
     padding-top: 10px;
     padding-bottom: 10px;
+    z-index: 99;
+
+    @media (min-width: 1024px) {
+        display: block;
+    }
 }
 
 .nav {
@@ -28,13 +35,20 @@ body {
 
 .header .nav {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
+
+    @media(min-width: 1024px) {
+        flex-direction: row;
+    }
 }
 
 .header .nav .logo p {
-    color: rgb(112, 110, 110);
-    text-align: center;
+    color: rgb(112, 110, 110);  
+
+    @media(min-width: 1024px) {
+        text-align: center;
+    }
 }
 
 .menu {
@@ -45,6 +59,16 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    padding-left: 0;
+    flex-wrap: wrap;
+}
+
+.contact-cta {
+    display: none;
+
+    @media (min-width: 1200px) {
+        display: block;
+    }
 }
 
 .menu .items {
@@ -54,6 +78,7 @@ body {
 .menu .items .item {
     margin-left: 15px;
     font-size: 18px;
+    margin-bottom: 15px;
 }
 
 .menu .items .item a {
@@ -94,10 +119,21 @@ body {
 
 .offer-types {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-evenly;
     padding-top: 60px;
     padding-bottom: 10px;
+
+    @media(min-width: 1024px) {
+        flex-direction: row;
+    }
+}
+
+
+.offer-types .residential .image-wrapper img,
+.offer-types .commercial .image-wrapper img {
+    display: flex;
+    margin: auto;
 }
 
 .offer-types .residential .image-wrapper,
@@ -114,8 +150,12 @@ body {
 .offer-types p {
     color: white;
     font-weight: bold;
-    font-size: 36px;
+    font-size: 24px;
     text-align: center;
+
+    @media (min-width: 1024px) {
+        font-size: 36px;
+    }
 }
 
 .services .service img {
@@ -126,10 +166,17 @@ body {
 .services {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-evenly;
     background-color: rgb(219,215,215);
     padding-top: 50px;
     padding-bottom: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    @media(min-width: 1024px) {
+        flex-direction: row;
+    }
 }
 
 .services .service {
@@ -138,6 +185,7 @@ body {
     font-weight: bold;
     font-size: 24px;
     text-decoration: underline;
+    width: 300px;
 }
 
 .center-aligned {
@@ -164,8 +212,8 @@ body {
 }
 
 .steps-wrapper {
-    width: 70%;
-    margin: auto;
+    width: 100%;
+    justify-content: center;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -173,10 +221,16 @@ body {
 
 .step {
     background-color: white;
-    width: 45%;
-    margin: 15px;
+    width: 90%;
+    margin: auto;
+    margin-top: 20px;
     padding-left: 10px;
     padding-bottom: 50px;
+
+    @media (min-width: 1024px) {
+        width: 45%;
+        margin: 15px;
+    }
 }
 
 .step h2 {
@@ -211,11 +265,17 @@ body {
 
 .reasons {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-evenly;
     background-color: rgba(255, 255, 255, 0.5);
-    width: 70%;
+    width: 90%;
     margin: auto;
+    text-align: center;
+
+    @media (min-width:1024px) {
+        flex-direction: row;
+        width: 70%;
+    }
 }
 
 .reasons p {
@@ -225,14 +285,23 @@ body {
 
 .testimonials {
     background-color: rgb(51,50,50);
-    padding-top: 80px;
+    padding-top: 10px;
+    height: auto;
+
+    @media (min-width: 1024px) {
+        padding-top: 80px;
+    }
 }
 
 .testimonials .testimonials-media {
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 90%;
     margin: auto;
+
+    @media (min-width: 1024px) {
+        width: 100%;
+    }
 }
 
 .testimonials .testimonials-media .media {
@@ -243,24 +312,39 @@ body {
     color: white;
     font-size: 24px;
     text-align: center;
+    width: 90%;
+
+    @media (min-width: 1024px) {
+        width: 100%;
+    }
 }
 
 .testimonial {
-    width: 50%;
+    width: 90%;
     margin: auto;
     color: white;
     font-size: 24px;
+
+    @media (min-width: 1024px) {
+        width: 50%;
+    }
 }
 
 .see-more {
     background-color: rgb(217,13,13);
     color: white;
     height: 70px;
-    font-size: 24px;
-    padding-left: 10px;
-    padding-right: 10px;
+    font-size: 16px;
+    padding-left: 5px;
+    padding-right: 5px;
     border: none;
     border-radius: 15px;
+
+    @media (min-width: 1024px) {
+        font-size: 24px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
 }
 
 .testimonials-footer {
@@ -269,7 +353,17 @@ body {
     margin: auto;
     justify-content: space-between;
     padding-bottom: 80px;
+    flex-direction: column;
     padding-top: 50px;
+
+    @media (min-width: 1024px) {
+        width: 50%;
+        flex-direction: row;
+    }
+}
+
+.testimonials-footer img {
+    margin-bottom: 20px;
 }
 
 footer {
@@ -284,20 +378,27 @@ footer {
     border-top: 1px solid white;
 }
 
-.footer-menu {
-    
-}
-
 .footer-menu .items {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     list-style-type: none;
     color: white;
     font-size: 24px;
     justify-content: space-evenly;
-    width: 50%;
+    width: 90%;
     margin: auto;
     padding-top: 40px;
+    text-align: center;
+    padding-left: 0;
+
+    @media (min-width: 1024px) {
+        flex-direction: row;
+        width: 50%;
+    }
+}
+
+.footer-menu .items .item {
+    margin-bottom: 10px;
 }
 
 .footer-menu .items a {
@@ -308,12 +409,20 @@ footer {
 .footer-contact {
     display: flex;
     justify-content: space-around;
-    width: 50%;
+    width: 90%;
     margin: auto;
     padding-top: 50px;
     padding-bottom: 50px;
     color: white;
     font-size: 18px;
+    flex-direction: column;
+    text-align: center;
+
+    @media (min-width: 1024px) {
+        flex-direction: row;
+        width: 50%;
+        text-align: inherit;
+    }
 }
 
 .copyright {
@@ -321,4 +430,76 @@ footer {
     display: flex;
     justify-content: space-evenly;
     padding-top: 20px;
+    flex-direction: column;
+    text-align: center;
+
+    @media (min-width: 1024px) {
+        flex-direction: row;
+        text-align: inherit;
+    }
+}
+
+.registration {
+    border-top: 1px solid black;
+    padding-bottom: 30px;
+}
+
+.form-wrapper {
+    width: 70%;
+    margin: auto;
+    margin-top: 30px;
+}
+
+.registration button {
+    background-color: rgb(217,13,13);
+    color: white;
+    height: 30px;
+    font-size: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border: none;
+    border-radius: 15px;
+}
+
+.registration button:hover {
+    background-color: rgb(155,13,13);
+}
+
+#alert-msg {
+    width: 70%;
+    margin: auto;
+    margin-top: 50px;
+}
+
+#alert-msg .alert {
+    background-color: rgb(244, 67, 54); 
+    color: white; 
+    padding: 15px; 
+    margin-bottom: 10px; 
+    border-radius: 5px; 
+    position: relative;
+}
+
+#alert-msg .alert .close-alert {
+    position: absolute; 
+    top: 15px; 
+    right: 10px; 
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.validated-data {
+    width: 70%;
+    margin: auto;
+    padding-bottom: 30px;
+}
+
+.validated-data {
+    font-size: 18px;
+}
+
+.validated-data .header {
+    font-size: 24px;
+    color: green;
+    font-weight: bold;
 }

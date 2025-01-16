@@ -3,47 +3,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="styles/slider.css">
     <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
     <div class="contact-fixed">
-        Contact Us
+        <select id="languageSelector">
+            <option value="en">English</option>
+            <option value="ge">Georgian</option>
+        </select>
     </div>
-    <div class="header">
+    <div class="header" id="header">
         <div class="nav">
             <div class="logo">
                 <img src="img/logo-28d30c4e-266w.webp"></img>
-                <p class="sub-text">
+                <p class="sub-text" data-translate="title">
                     Quality Assured Satisfaction Guaranteed
                 </p>
             </div>
             <div class="menu">
                 <ul class="items">
                     <li class="item">
-                        <a href="#">Home</a>
+                        <a href="#header" data-translate="menu-home">Home</a>
                     </li>
                     <li class="item">
-                        <a href="#">About Us</a>
+                        <a href="#about-us" data-translate="menu-about">About</a>
                     </li>
                     <li class="item">
-                        <a href="#">Services</a>
+                        <a href="#services" data-translate="menu-services">Services</a>
                     </li>
                     <li class="item">
-                        <a href="#">Contact Us</a>
+                        <a href="#" data-translate="menu-contact">Contact</a>
                     </li>
                     <li class="item">
-                        <a href="#">Sign Up</a>
+                        <a href="registration.html" data-translate="menu-sign-up">Sign Up</a>
                     </li>
                     <li class="item">
-                        <a href="#">Log In</a>
-                    </li>
-                    <li class="item">
-                        <a href="#">TBD</a>
+                        <a href="#" data-translate="menu-log-in">Log In</a>
                     </li>
                 </ul>
             </div>
             <div class="contact-cta">
-                <p class="cta">Call Today To Receive Your FREE Estimate!</p>
+                <p class="cta" data-translate="cta">Call Today To Receive Your FREE Estimate!</p>
                 <div class="phone">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" id="1681808080" class="svg u_1681808080" data-icon-name="li_phone"> <g> <path d="M36.2,22.1v2.2c5.5,0,10,4.5,10,10h2.2C48.4,27.6,42.9,22.1,36.2,22.1z"></path> 
                         <path d="M52.4,34.3h2.2c0-4.9-1.9-9.6-5.4-13.1c-3.5-3.5-8.1-5.4-13.1-5.4V18c4.4,0,8.5,1.7,11.5,4.8C50.7,25.9,52.4,30,52.4,34.3z
@@ -74,39 +75,39 @@
             <div class="image-wrapper">
                 <img src="img/residential.webp" alt="">
             </div>
-            <p>Residential Painting</p>
+            <p data-translate="res-paint">Residential Painting</p>
         </div>
         <div class="commercial">
             <div class="image-wrapper">
                 <img src="img/commercial.webp" alt="">
             </div>
-            <p>Commercial Painting</p>
+            <p data-translate="com-paint">Commercial Painting</p>
         </div>
     </div>
-    <div class="services">
+    <div class="services" id="about-us">
         <div class="service">
             <img src="img/home-logo.png" alt="">
-            <p>Residential Painting</p>
+            <p data-translate="res-paint">Residential Painting</p>
         </div>
         <div class="service">
             <img src="img/home-logo.png" alt="">
-            <p>Commercial Painting</p>
+            <p data-translate="com-paint">Commercial Painting</p>
         </div>
         <div class="service">
             <img src="img/home-logo.png" alt="">
-            <p>Cabinets & Trim Painting</p>
+            <p data-translate="cab-trims">Cabinets & Trim Painting</p>
         </div>
         <div class="service">
             <img src="img/home-logo.png" alt="">
-            <p>Decks & More</p>
+            <p data-translate="decks-more">Decks & More</p>
         </div>
         <div class="service">
             <img src="img/home-logo.png" alt="">
-            <p>Drywall Services</p>
+            <p data-translate="drywall">Drywall Services</p>
         </div>
         <div class="service">
             <img src="img/home-logo.png" alt="">
-            <p>Wallpaper Removal</p>
+            <p data-translate="wallpaper">Wallpaper Removal</p>
         </div>
     </div>
     <div class="about">
@@ -149,9 +150,9 @@
         </p>
     </div>
     <div class="steps">
-        <div class="steps-wrapper">
+        <div class="steps-wrapper" id="services">
             <div class="step">
-                <h2>Inspect</h2>
+                <h2 data-translate="inspect">Inspect</h2>
                 <p>
                     We inspect every detail of a new project to assure that we understand 
                     the scope of the work you want done. This helps guarantee we deliver a 
@@ -159,7 +160,7 @@
                 </p>
             </div>
             <div class="step">
-                <h2>Preparation</h2>
+                <h2 data-translate="preparation">Preparation</h2>
                 <p>
                     All items are covered, including floors and furniture.
                     Walls and ceilings are inspected for cracks, then filled 
@@ -205,27 +206,67 @@
             </div>
         </div>
         <div class="testimonial">
-            <h2>Our Clients Say Nice Things About Us</h2>
-            <p>
-                AMAZING CUSTOMER SERVICE! <br><br>
-                I happened to see White Brush Painting Work van in a local stores parking lot. I took a picture 
-                of his logo and phone number….and boy I’m glad I did!
-                <br><br>
-                I left a voicemail message and the owner Hilario Monteil returned my call within an hour. 
-                He came by our house the same afternoon after finishing up a job that he was working on. 
-                Received a wonderful written bid within 48 hours! By the way….I had left voicemail messages at 
-                three other reputable painting firms on Whidbey Island. Of those three, only one called 
-                two weeks later saying they were booked up for the summer.
-                <br><br>
-                Hilario power washed our 2800 square foot home within the week. By the following week our 
-                home transformed into a stunningly beautiful thing! Extremely professional, excellent rates,
-                and, outstanding customer service!
-                <br><br>
-                I could go on and on about what a great experience it was to do business with Hilario Monteil`s 
-                White Brush Painting! Please give him a call…you won’t be sorry!
-                <br><br>
-                -Rachael Nikkola
-            </p>
+            <h2 style="text-align: center;">Our Clients Say Nice Things About Us</h2>
+            <div class="testimonials">
+                <ul class="slider-container">
+                  <li class="slider active-slide">
+                    <figure class="testimonial">
+                      <img class="testimonial-img" src="img/person1.jpg"
+                        alt="Image of customer"/>
+                    </figure>
+                    <p class="testimonial-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                    <p class="customer-name"><i>-John Doe</i></p>
+                  </li>
+                  <li class="slider">
+                    <figure class="testimonial">
+                      <img class="testimonial-img" src="img/person2.jpg"
+                        alt="Image of customer"/>
+                    </figure>
+                    <p class="testimonial-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                    <p class="customer-name"><i>-John Doe</i></p>
+                  </li>
+                  <li class="slider">
+                    <figure class="testimonial">
+                      <img class="testimonial-img" src="img/person3.jpg"
+                        alt="Image of customer"/>
+                    </figure>
+                    <p class="testimonial-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                    <p class="customer-name"><i>-John Doe</i></p>
+                  </li>
+                  <li class="slider">
+                    <figure class="testimonial">
+                      <img class="testimonial-img" src="img/person4.jpg"
+                        alt="Image of customer"/>
+                    </figure>
+                    <p class="testimonial-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                    <p class="customer-name"><i>-John Doe</i></p>
+                  </li>
+                  <li class="slider">
+                    <figure class="testimonial">
+                      <img class="testimonial-img" src="img/person5.jpg"
+                        alt="Image of customer"/>
+                    </figure>
+                    <p class="testimonial-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                    <p class="customer-name"><i>-John Doe</i></p>
+                  </li>
+                </ul>
+                <div class="btn-dots flex">
+                  <button class="btn-dot active-dot"></button>
+                  <button class="btn-dot"></button>
+                  <button class="btn-dot"></button>
+                  <button class="btn-dot"></button>
+                </div>
+              </div>
         </div>
         <div class="testimonials-footer">
             <img src="img/google.webp" alt="">
@@ -236,26 +277,23 @@
         <div class="footer-menu">
             <ul class="items">
                 <li class="item">
-                    <a href="#">Home</a>
+                    <a href="#header">Home</a>
                 </li>
                 <li class="item">
-                    <a href="#">About Us
+                    <a href="#about-us">About Us
                     </a>
                 </li>
                 <li class="item">
-                    <a href="#">Services</a>
+                    <a href="#services">Services</a>
                 </li>
                 <li class="item">
                     <a href="#">Contact Us</a>
                 </li>
                 <li class="item">
-                    <a href="#">Sign Up</a>
+                    <a href="registration.html">Sign Up</a>
                 </li>
                 <li class="item">
                     <a href="#">Log In</a>
-                </li>
-                <li class="item">
-                    <a href="#">TBD</a>
                 </li>
             </ul>
         </div>
@@ -272,6 +310,7 @@
             </p>
         </div>
     </footer>
-    <script src="script.js"></script>
+    <script src="languages.js"></script>
+    <script src="slider.js"></script>
 </body>
 </html>
