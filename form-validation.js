@@ -59,7 +59,6 @@ function displayValidatedData(fields) {
     const validatedDataDiv = document.querySelector(".validated-data");
     validatedDataDiv.style.display = "block";
 
-    // Populate fields
     document.querySelector(".email .entered-data").textContent = fields.email;
     const passwordStrength = getPasswordStrength(fields.password);
     document.querySelector(".password .entered-data").textContent = fields.password.replace(/./g, "*");
